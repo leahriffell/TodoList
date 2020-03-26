@@ -1,0 +1,64 @@
+:root {
+  --color_dark: #6C5CE7;
+  --color_light: #A29BFE;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: white;
+}
+
+h1 {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.task {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.task--completed {
+  text-decoration: line-through;
+  opacity: 60%;
+}
+
+.taskContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 3px solid var(--color_dark);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1em;
+  color: white;
+  background-color: var(--color_light);
+}
+
+#todoContainer {
+  background-color: var(--color_dark);
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 60px auto;
+  border: 2px solid var(--color_dark);
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+@media all and (max-width : 480px) {
+  #todoContainer {
+    width: 80%;
+    margin: 20px auto;
+}
+
+@media all and (max-width : 992px) {
+  #todoContainer {
+    width: 90%;
+  }
+}
