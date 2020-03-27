@@ -1,3 +1,9 @@
+$(init);
+
+function init() {
+  $("ul").sortable();
+};
+
 $("ul").on("click", ".checkboxAndTask", function() {
   $(this).parent().find(".task").toggleClass("task--completed");
   $(this).parent().find(".markComplete").toggleClass("fa-square fa-check-square");
