@@ -14,11 +14,26 @@ h1 {
 
 ul {
   list-style-type: none;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.delete {
+  display: inline-flex;
+  opacity: 0%;
+}
+
+.taskContainer:hover .delete {
+  opacity: 100%;
+  transition: opacity .25s;
 }
 
 .task {
-    display: inline-block;
+    display: inline-flex;
     margin-left: 20px;
     text-decoration: inherit;
 }
@@ -32,6 +47,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
   border: 3px solid var(--color_dark);
   border-radius: 10px;
   padding: 10px;
@@ -44,23 +60,19 @@ ul {
   background-color: var(--color_dark);
   display: flex;
   flex-direction: column;
-  width: 50%;
-  margin: 60px auto;
+  width: 70%;
+  margin: 20px auto;
   border: 2px solid var(--color_dark);
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
 }
 
-@media all and (max-width: 480px) {
-  #todoContainer {
-    width: 90%;
-    margin: 20px auto;
+#newTaskInput {
+  font-weight: 600;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 800px) {
   #todoContainer {
     width: 90%;
-    margin: 20px auto;
-  }
 }

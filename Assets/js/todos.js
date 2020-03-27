@@ -17,6 +17,6 @@ $("input").keypress(function(event) {
   if(event.which === 13) {
     var todoText = $(this).val();
     $(this).val("Add a new todo");
-    $("ul").append( " <div class='taskContainer'><div class='checkboxAndTask'><i class='markComplete far fa-square'></i><li class='task'> " + todoText + " </li></div><i class='delete fas fa-trash'></i></div> " );
+    $("ul").append( "<div class='taskContainer'><div class='checkboxAndTask'><i class='markComplete far fa-square'></i><li class='task'>" + todoText + "</li></div><i class='delete fas fa-trash'></i></div>" );
   }
  });
