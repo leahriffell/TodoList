@@ -20,6 +20,7 @@ ul {
 .task {
     display: inline-block;
     margin-left: 20px;
+    text-decoration: inherit;
 }
 
 .task--completed {
@@ -51,14 +52,15 @@ ul {
   border-radius: 10px;
 }
 
-@media all and (max-width : 480px) {
+@media all and (max-width: 480px) {
   #todoContainer {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
 }
 
-@media all and (max-width : 992px) {
+@media all and (max-width: 600px) {
   #todoContainer {
     width: 90%;
+    margin: 20px auto;
   }
 }
