@@ -1,4 +1,4 @@
-$( "ul").on("click", ".checkboxAndTask", function() {
+$("ul").on("click", ".checkboxAndTask", function() {
   $(this).parent().find(".task").toggleClass("task--completed");
   $(this).parent().find(".markComplete").toggleClass("fa-square fa-check-square");
 });
@@ -14,9 +14,17 @@ $("input").click(function() {
 });
 
 $("input").keypress(function(event) {
-  if(event.which === 13) {
+  if (event.which === 13) {
     var todoText = $(this).val();
     $(this).val("Add a new todo");
-    $("ul").append( "<div class='taskContainer'><div class='checkboxAndTask'><i class='markComplete far fa-square'></i><li class='task'>" + todoText + "</li></div><i class='delete fas fa-trash'></i></div>" );
+    $("ul").append(`
+      <li class='taskContainer'>
+        <div class='checkboxAndTask'>
+          <i class='markComplete far fa-square'></i>
+          <span class='task'>${todoText}</span>
+        </div>
+        <i class='delete fas fa-trash'></i>
+      </li>
+    `);
   }
  });
